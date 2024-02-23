@@ -1,0 +1,35 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+
+  // CodeSpell
+  "cSpell.allowCompoundWords": true,
+  "cSpell.ignorePaths": [
+    ".vscode/*",
+    "dist",
+    "node_modules",
+    "package.json",
+    "pnpm-lock.yaml"
+  ],
+  "cSpell.customDictionaries": {
+    "customWords": {
+      "addWords": true,
+      "description": "Words used in this project",
+      "name": "customWords",
+      "path": "${workspaceRoot}/.configs/.cSpellWords.txt"
+    },
+  },
+  "cSpell.dictionaries": [
+    "companies",
+    "css",
+    "customWords",
+    "html",
+    "misc",
+    "node",
+    "npm",
+    "softwareTerms",
+    "typescript"
+  ],
+  "cSpell.language": "en,ru,ru-RU,en-US"
+}

@@ -1,0 +1,3 @@
+FROM haskell:9.8.1
+
+
