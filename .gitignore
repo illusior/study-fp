@@ -1,0 +1,7 @@
+# cabal's outputs
+dist-newstyle/
+
+# Haskell's outputs
+*.hi
+*.o
+*.exe
