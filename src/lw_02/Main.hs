@@ -114,6 +114,7 @@ task03 = do
 
 insert :: [a] -> a -> Int -> [a]
 insert xs _ n | n <= 0 = xs
+insert xs x n | n >= length xs = xs ++ [x]
 insert xs x n = take n xs ++ [x] ++ drop n xs
 
 -- ===================== TASK 03 =====================
@@ -143,8 +144,8 @@ task04 = do
 
 listSum :: (Num a) => [a] -> [a] -> [a]
 listSum [] [] = []
-listSum [] (x : xs) = x : xs
-listSum (x : xs) [] = x : xs
+listSum [] xs = xs
+listSum xs [] = xs
 listSum (x : axs) (y : bxs) = (x + y) : listSum axs bxs
 
 -- ===================== TASK 04 =====================

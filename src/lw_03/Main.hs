@@ -62,15 +62,13 @@ task01 = do
 
 secondlastlist :: [[a]] -> [a]
 secondlastlist [] = []
-secondlastlist [[]] = []
-secondlastlist [x] = take 1 (reverse x)
 secondlastlist (xs:xss) | length xs == 0 = secondlastlist xss
                         | otherwise = last xs : secondlastlist xss
 
 
 task02 :: IO ()
 task02 = do
-  let list :: [[Int]] = [[], [3], [5, 6], [7, 8, 9]]
+  let list :: [[Int]] = [[], [3], [5, 6], [7, 8, 9], []]
   putStr "Here a list: "
   print list
   putStrLn ""
@@ -99,7 +97,7 @@ myunion xs (y:ys) = foldl
 
 task03 :: IO ()
 task03 = do
-  let list1 :: [Int] = [3, 6, 1, 0]
+  let list1 :: [Int] = [3, 6, 1, 1, 0]
   let list2 :: [Int] = [1, 2, 3, 4, 5, 6]
   putStr "Here is a pair of lists: "
   print list1
@@ -152,7 +150,7 @@ takeNthFromSublists n xs = catMaybes (
     map (safeGetNth n) xs
   )
   where
-    safeGetNth n xs | length xs >= n = Just (xs !! (n - 1))
+    safeGetNth n xs | length xs >= n && n >= 0 = Just (xs !! (n - 1))
                     | otherwise = Nothing
 
 
